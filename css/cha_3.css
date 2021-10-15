@@ -1,0 +1,239 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --margin: 40px;
+}
+/* the container */
+.container {
+  width: 600px;
+  height: 1400px;
+  background-color: white;
+  margin: 30px auto;
+  padding: 20px;
+  border: solid 1px #9e9e9e;
+  position: relative;
+}
+/* h3 */
+h3 {
+  color: black;
+}
+/* the lines */
+
+.container .circle .line,
+.container .Triangle_u .line,
+.container .triangle_d .line,
+.container .box .line {
+  width: 184px;
+  height: 2px;
+  position: relative;
+  top: -31px;
+  right: -2px;
+  background-color: #9e9e9e;
+}
+/* the end lines */
+
+/* line color */
+
+.container .circle .blue + .line,
+.container .box .blue + .line,
+.container .triangle_d .blue + .line,
+.container .Triangle_u .blue + .line {
+  background-image: linear-gradient(45deg, #3f51b5 50%, transparent 50%);
+}
+
+.container .circle .red + .line,
+.container .box .red + .line,
+.container .triangle_d .red + .line,
+.container .Triangle_u .red + .line {
+  background-image: linear-gradient(45deg, #f44336 50%, transparent 50%);
+}
+
+.container .circle .green + .line,
+.container .box .green + .line,
+.container .triangle_d .green + .line,
+.container .Triangle_u .green + .line {
+  background-image: linear-gradient(45deg, #4caf50 50%, transparent 50%);
+}
+
+.container .circle .oringe + .line,
+.container .box .oringe + .line,
+.container .triangle_d .oringe + .line,
+.container .Triangle_u .oringe + .line {
+  background-image: linear-gradient(45deg, #ff9800 50%, transparent 50%);
+}
+
+/* start the circle that mean after */
+
+.container .circle .blue::after,
+.container .circle .red::after,
+.container .circle .green::after,
+.container .circle .oringe::after {
+  width: 10px;
+  content: "";
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 103px;
+  left: 20px;
+  z-index: 2;
+}
+/* end the circle that mean after */
+
+/* the blue one */
+.blue {
+  color: #3f51b5;
+  margin-bottom: var(--margin);
+}
+
+.container .circle .blue::after {
+  background-color: #3f51b5;
+}
+/* the end of blue one */
+
+/* red */
+.red {
+  color: #f44336;
+  margin-bottom: var(--margin);
+}
+
+.container .circle .red::after {
+  top: 180px;
+  left: 20px;
+  background-color: #f44336;
+}
+
+/* green */
+
+.green {
+  color: #4caf50;
+  margin-bottom: var(--margin);
+}
+
+.container .circle .green::after {
+  top: 257px;
+  left: 20px;
+  background-color: #4caf50;
+}
+
+/* oringe */
+.oringe {
+  color: #ff9800;
+  margin-bottom: var(--margin);
+}
+
+.container .circle .oringe + .line {
+  height: 1px;
+  background-image: linear-gradient(90deg, #ff9800 50%, transparent 50%);
+}
+
+.container .circle .oringe::after {
+  top: 334px;
+  left: 20px;
+  background-color: #ff9800;
+}
+
+/* after */
+.container .box .blue::before,
+.container .box .red::before,
+.container .box .green::before,
+.container .box .oringe::before {
+  width: 10px;
+  content: "";
+  height: 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+.container .box .blue::before {
+  background-color: #3f51b5;
+  top: 454px;
+  left: 20px;
+}
+.container .box .red::before {
+  background-color: #f44336;
+  top: 531px;
+  left: 20px;
+}
+.container .box .green::before {
+  background-color: #4caf50;
+  top: 607px;
+  left: 20px;
+}
+.container .box .oringe::before {
+  background-color: #ff9800;
+  top: 685px;
+  left: 20px;
+}
+/* up after */
+.container .Triangle_u .blue::before,
+.container .Triangle_u .red::before,
+.container .Triangle_u .green::before,
+.container .Triangle_u .oringe::before {
+  content: "";
+  border: solid 7px;
+  position: absolute;
+  z-index: 2;
+}
+
+.container .Triangle_u .blue::before {
+  border-color: transparent transparent #3f51b5 transparent;
+  top: 795px;
+  left: 22px;
+}
+.container .Triangle_u .red::before {
+  border-color: transparent transparent #f44336 transparent;
+  top: 872px;
+  left: 22px;
+}
+.container .Triangle_u .green::before {
+  border-color: transparent transparent #4caf50 transparent;
+  top: 950px;
+  left: 22px;
+}
+.container .Triangle_u .oringe::before {
+  border-color: transparent transparent #ff9800 transparent;
+  top: 1027px;
+  left: 22px;
+}
+
+/* the t d */
+
+.container .triangle_d .blue::before,
+.container .triangle_d .red::before,
+.container .triangle_d .green::before,
+.container .triangle_d .oringe::before {
+  content: "";
+  border: solid 7px;
+  position: absolute;
+  z-index: 2;
+}
+
+.container .triangle_d .blue::before {
+  border-color: #3f51b5 transparent transparent transparent;
+  top: 1163px;
+  left: 22px;
+}
+.container .triangle_d .red::before {
+  border-color: #f44336 transparent transparent transparent;
+  top: 1240px;
+  left: 22px;
+}
+.container .triangle_d .green::before {
+  border-color: #4caf50 transparent transparent transparent;
+  top: 1317px;
+  left: 22px;
+}
+.container .triangle_d .oringe::before {
+  border-color: #ff9800 transparent transparent transparent;
+  top: 1394px;
+  left: 22px;
+}
+.foot {
+  color: #9e9e9e;
+  margin-left: 14%;
+  letter-spacing: -1px;
+}
